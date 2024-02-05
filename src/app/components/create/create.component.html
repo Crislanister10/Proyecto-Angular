@@ -1,0 +1,43 @@
+<div class="contact_contact">
+    
+    <form  class="contact_form" #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+      <div class="row">
+        <input type="text"  placeholder="Nombre" name="name" #name="ngModel" [(ngModel)]="project.name"
+        required="">
+        <span *ngIf="name.touched && !name.valid">*El nombre es obligatorio</span>
+        
+        <input type="text" placeholder="Descripcion" name="descripcion" #descripcion="ngModel" [(ngModel)]="project.description"
+        required=""> 
+        <span *ngIf="descripcion.touched && !descripcion.valid">*la descripcion es obligatorio</span>    
+    
+        <input type="text" placeholder="Categoria" name="categoria" #categoria="ngModel" [(ngModel)]="project.category"
+        required=""> 
+        <span *ngIf="categoria.touched && !categoria.valid">*la categoria es obligatorio</span>
+        
+        <input type="submit" value="Enviar Mensaje" id="enviar">
+    </div>
+
+     <div class="row row2"> 
+        <input type="number" placeholder="Año" name="year" #year="ngModel" [(ngModel)]="project.year"
+        required="">
+        <span *ngIf="year.touched && !year.valid">*el año es obligatorio</span>
+    
+        <input type="text" placeholder="Lenguaje" name="lang" #lang="ngModel" [(ngModel)]="project.lang"
+        required=""> 
+        <span *ngIf="lang.touched && !lang.valid">*El lenguaje es obligatorio</span>
+
+        <input type="file" placeholder="subir imagen" name="img" #img="ngModel" [(ngModel)]="project.img"
+        required="" (change)="fileChangeEvent($event)"> 
+
+        <span *ngIf="img.touched && !img.valid">*la imagen es obligatorio</span>
+    </div>
+        
+    </form>
+
+    <div class="succes" *ngIf="status == 'succes' ">
+        <p>Proyecto creado de manera exitosa</p>
+    </div>
+    <div class="failed" *ngIf="status == 'failed' ">
+      <p>Error al crear el proyecto</p>
+    </div>
+</div>

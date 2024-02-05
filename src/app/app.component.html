@@ -1,0 +1,46 @@
+
+<header>
+    
+       
+  <ul ><li class="logo">Cristian Benitez</li></ul>
+      <nav class="menu" id="menu2">
+        
+        <ul>
+          <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['active']">about</a></li>
+          <li><a [routerLink]="['/proyectos']" [routerLinkActive]="['active']">Projects</a></li>
+          <li><a [routerLink]="['/crear']" [routerLinkActive]="['active']">Create</a></li>
+          <li><a [routerLink]="['/contacto']" [routerLinkActive]="['active']">Contact</a></li>
+        </ul>
+      </nav>
+</header>
+
+<section class="content">
+  <router-outlet></router-outlet>
+</section>
+
+<footer class="contact">
+  <div class="contact_title"><h1>Contacto</h1></div> 
+<div class="contact_informaation">
+  <h2><span>&copy Cristian Benitez 2023</span></h2>
+  <h2><span>Telefono</span></h2>
+  <h3>321 525 62 62</h3>
+  <h2><span>Email</span></h2>
+  <h3>cristtiabbenigmail.com</h3>
+</div>
+<div class="contact_contact">
+  <form action="" id="contact_form">
+       
+      <input type="text" id="nombre"  value="Nombre">
+       
+      <input type="email" id="email" value="Email"> 
+
+      <input type="text" id="asunto" value="asunto"> 
+      <input type="tel" id="numbre"  value="Telefono"> <br>
+
+      <textarea name="" id=""   value="Descripcion">Descripcion</textarea><br>
+
+      <input type="submit" value="Enviar Mensaje" id="enviar">
+  </form>
+</div>
+</footer>
+ 

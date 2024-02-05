@@ -1,0 +1,26 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { ModuleWithProviders } from '@angular/core';
+
+import { AboutComponent  } from "./components/about/about.component";
+import { ProjectsComponent  } from "./components/projects/projects.component";
+import { CreateComponent  } from "./components/create/create.component";
+import { ContactComponent  } from "./components/contact/contact.component";
+
+const routes: Routes = [
+
+      {path: '', component:AboutComponent},
+      {path: 'sobre-mi', component:AboutComponent},
+      {path: 'proyectos', component:ProjectsComponent},
+      {path: 'crear', component:CreateComponent},
+      {path: 'contacto', component:ContactComponent},
+      {path: '**t', component:AboutComponent}
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+export const appRoutingProviders : any []=[]
+export const routing: ModuleWithProviders<any> = RouterModule.forRoot(routes);

@@ -1,0 +1,26 @@
+<p>projects works!</p>
+
+<div   >
+    <ul *ngFor="let project of projects">
+            <li><img  [src]="url + 'get-image/' +  project.img"  *ngIf="project.img"  alt=""></li>
+            <p>{{project.name}}</p>
+    </ul>
+
+
+</div><!--
+<div class="projects" *ngFor="let project of projects">
+
+    <h1 class="projects_title">Projectos</h1>
+    <div class="projectosPro1">
+        
+        <img src="{{url+'get-image/'+project.img}}"  *ngIf="project.img" alt="">
+    </div>
+    <div class="projectosPro2">
+        <img src="../img/banner1.jpeg" alt="">
+    </div>
+    <div class="projectosPro3">
+        <img src="../img/banner3.jpg" alt="">
+    </div>
+
+
+</div>-->

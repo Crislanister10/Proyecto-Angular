@@ -1,0 +1,89 @@
+
+$color-banner : #2B2C30;
+$color-body: #242528;
+$color-title: #C7C9CC;
+$color-span:#51C68B;
+$color-parrafo:#E1E2E6;
+
+
+.contact_form{
+        display: flex;
+        
+        padding: 10px;
+         
+    .row{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 50%;
+        span{
+            color:red;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 40%;
+            margin-top: -12px;
+            margin-bottom: 3px;
+
+        }
+    }
+    .row2{
+        align-items: flex-start!important;
+    }
+    
+    input{
+        width:60%;
+        border-radius: 20px;
+        background-color: $color-banner;
+        color: $color-title;
+        height: 40px;
+        margin-bottom: 15px;
+        margin-right:15px;
+        box-shadow: none;
+        padding-left: 10px;
+        border: none;
+
+    }
+    textarea{
+        background-color: $color-banner;
+        border: none;
+        color: $color-parrafo;
+        line-height: 2;
+        width: 96%;
+        height: 120px;
+    }
+    
+    #enviar{
+         
+        width: 20%;
+        padding: 5px 5px;
+        margin-top: 20px;
+        text-align: center;
+        background-color: $color-span;
+        color: $color-banner;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 300ms;
+        
+    } 
+    #enviar:hover{
+        background-color: $color-parrafo;
+        scale: 1.05;
+    }
+
+
+}
+.succes{
+    background-color: #51C68B;
+    color: #242528;
+    width: 20%;
+    text-align: center;
+    margin-left: 240px;
+}
+.failed{
+    background-color: red;
+    color: #242528;
+    width: 20%;
+    text-align: center;
+    margin-left: 240px;
+}
